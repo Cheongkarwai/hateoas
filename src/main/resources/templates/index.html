@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<p th:text="${self_link}"></p>
+    <form th:action="@{/subscriptions/buy}" method="post" th:object="${subscription}">
+        <input type="text" th:field="*{name}" />
+        <button type="submit">Hi</button>
+    </form>
+</body>
+</html>
